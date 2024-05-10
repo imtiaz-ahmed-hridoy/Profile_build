@@ -1,0 +1,32 @@
+// site design
+
+
+@use 'variable/navbar';
+
+
+
+
+// tailwind code
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// fontawesome code
+
+@import '@fortawesome/fontawesome-free/css/fontawesome.css';
+@import '@fortawesome/fontawesome-free/css/regular.css';
+@import '@fortawesome/fontawesome-free/css/solid.css';
+@import '@fortawesome/fontawesome-free/css/brands.css';
+
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+
+    box-sizing: border-box;
+}
+
+
+
