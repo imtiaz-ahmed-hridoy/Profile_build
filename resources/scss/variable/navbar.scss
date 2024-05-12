@@ -1,21 +1,34 @@
 
 
 
-:root{
-    --navbarcolor:#388087;
-    --navtext: #F7F7F7
 
 
+
+//this code is for navbar ripples background
+
+
+
+
+
+
+
+
+
+
+
+//this code is for navbar ripples background end
+
+
+
+// only for home icon and contact icon
+
+.hidden {
+    display: none;
 }
 
 
 
-
-
-
-
-
-
+// only for home icon and contact icon end
 
 .navbar {
     position: fixed;
@@ -56,53 +69,53 @@
     height: 100%;
     text-align: center;
     font-weight: 500;
-
 }
 .navicon {
     position: relative;
-    display: flex;justify-content: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    height: 55px;
-    width: 55px;
+    height: 60px;
+    width: 60px;
     border-radius: 50%;
-    transition: .5s;
+    transition: 0.5s;
     transition-delay: 0s;
-
 }
-.navtext{
+
+.navtext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    background: var(--navbaricon);
+
     color: var(--navtext);
-    padding: 2px 7px;
-    border-radius: 12px;
-    font-weight: 400;
-    font-size: .80rem;
-    letter-spacing: .3rem;
-    transition: .5s;
+
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.25rem;
+    transition: 0.5s;
     transition-delay: 0s;
-    transform: translateY(40px);
+    transform: translateY(30px);
 
     opacity: 0;
-
-
-
-
 }
+// this css for active navbar icon and text
 
-.navbar ul li.active a .navtext{
-    transform: translateY(-1px);
-    transition-delay: .25s;
+.navbar ul li.active a .navtext {
+    transform: translateY(1px);
+    transition-delay: 0.25s;
     opacity: 1;
-
+    top: 35px;
 }
 
 .navbar ul li.active a .navicon {
-    background:var(--navbaricon);
+    background: var(--navbaricon);
     transform: translateY(-50px);
     z-index: 2;
-    transition-delay: .25s;
-
+    transition-delay: 0.25s;
 }
+// this css for active navbar icon and text end
+// this css for navber icon background
 .navbar ul li a .navicon::before {
     content: "";
     position: absolute;
@@ -114,33 +127,52 @@
     filter: blur(5px);
     opacity: 0;
     z-index: -1;
-    transition: .5s;
+    transition: 0.5s;
     transition-delay: 0s;
 
     background: var(--navbaricon);
 }
-.navbar ul li.active a .navicon::before{
-    opacity: .5;
-    transition-delay: .25s;
+
+
+// this css for navber icon background end
+
+// this css for navber icon background when active
+.navbar ul li.active a .navicon::before {
+    opacity: 0.5;
+    transition-delay: 0.25s;
 }
+// this css for navber icon background when active end
 
+// this css for navbar upper section
 
-.indicator{
+.iconborder{
 
-    content: '';
+    height: 7px;
+    width: 35px;
+    top: 25px;
+    background:var(--navbaricon);
     position: absolute;
-    background:var(--navbarcolor);
+    z-index: 3;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 0.5px #e4e4e4;
+
+
+}
+.indicator {
+    content: "";
+    position: absolute;
+    background: var(--navbarcolor);
     height: 80px;
     width: 80px;
     top: -48px;
     left: 19.5px;
     border-radius: 50%;
     z-index: 1;
-    transition: .5s;
+    transition: 0.5s;
+
 }
 
-.indicator::before{
-
+.indicator::before {
     content: "";
     position: absolute;
     background: transparent;
@@ -151,8 +183,7 @@
     border-radius: 50%;
     box-shadow: 10px 16px var(--navbarcolor);
 }
-.indicator::after{
-
+.indicator::after {
     content: "";
     position: absolute;
     background: transparent;
@@ -163,27 +194,38 @@
     border-radius: 50%;
     box-shadow: -10px 16px var(--navbarcolor);
 }
+// this css for navbar upper section end
 
+// this css for navbar upper section for every icon
+.navbar ul li ~ .indicator{
+    display: none;
+
+}
 
 .navbar ul li:nth-child(1).active ~ .indicator{
+
+    display: block;
     transform: translateX(calc(80px * 0));
-
 }
-.navbar ul li:nth-child(2).active ~ .indicator{
+.navbar ul li:nth-child(1).active ~ .indicator {
+    display: block;
+    transform: translateX(calc(80px * 0));
+}
+.navbar ul li:nth-child(2).active ~ .indicator {
+    display: block;
     transform: translateX(calc(80px * 1));
-
 }
-.navbar ul li:nth-child(3).active ~ .indicator{
+.navbar ul li:nth-child(3).active ~ .indicator {
+    display: block;
     transform: translateX(calc(80px * 2));
-
 }
-.navbar ul li:nth-child(4).active ~ .indicator{
+.navbar ul li:nth-child(4).active ~ .indicator {
+    display: block;
     transform: translateX(calc(80px * 3));
-
 }
-.navbar ul li:nth-child(5).active ~ .indicator{
+.navbar ul li:nth-child(5).active ~ .indicator {
+    display: block;
     transform: translateX(calc(80px * 4));
-
 }
 
-
+// this css for navbar upper section for every icon end
