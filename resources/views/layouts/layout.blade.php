@@ -33,7 +33,11 @@
         @yield('footer')
     </footer>
 
+    {{-- this script for rellax js for parallax --}}
+
 
 </body>
+
+
 
 </html>

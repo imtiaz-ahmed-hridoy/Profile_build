@@ -10,5 +10,8 @@
     {{-- Navbar --}}
     @include('webpages.navbar')
 
+    @include('webpages.body')
+
+
 
 @endsection
